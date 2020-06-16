@@ -1,7 +1,7 @@
 # Write your code here
 import random
 
-print('H A N G M A N\n')
+print('H A N G M A N \n')
 
 wlist = ['python', 'java', 'kotlin', 'javascript']
 random.shuffle(wlist) # shuffle the word list
@@ -22,17 +22,17 @@ while no_of_attempts < 8:
     no_of_attempts += 1
     print(*computed_word_with_blanks,sep = "")   # Print the elements in the list without any space
     letter = input('Input a letter:')  # Get input from the user
-    for i in range (0,len(computed_word)):  # Check if character is part of the computer_word
-        if computed_word[i] == letter and letter_present != 0: 
-            computed_word_with_blanks[i] = letter  # if yes, replace the character in the list.
-        else:
-            letter_present = 0   # if not set letter_presnet to 0.
-    if letter_present == 0:
+    if letter in computed_word:
+        for i in range (0,len(computed_word)):  # Check if character is part of the computer_word
+            if computed_word[i] == letter and letter_present != 0: 
+                computed_word_with_blanks[i] = letter  # if yes, replace the character in the list.
+    else:
         print("No such letter in the word")  # if letter pesent = 0 print.
-    print()  # newline to make hyperskill test case happy.
+
+    print()  
         
         
-print()   # newline to make hyperskill test case happy.
+print() 
 
 print("Thanks for playing!")
 
