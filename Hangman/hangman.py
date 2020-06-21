@@ -20,6 +20,12 @@ all_valid_guessed_words = list()
 
 no_of_attempts = 0
 
+print("""Type "play" to play the game, "exit" to quit:""")
+
+choice = str(input())
+
+if choice == "exit":   
+    no_of_attempts = 10
 
 
 while no_of_attempts < 8:
